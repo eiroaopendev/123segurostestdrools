@@ -1,0 +1,11 @@
+package com.opendevsolutions._23seguro;
+
+import java.lang.Number;
+
+rule "ExcessOfWorks"
+	dialect "mvel"
+	when
+		Cuando la cantidad de TPs es Mayor a 10
+	then
+		Cantidad de TPs no valida
+end

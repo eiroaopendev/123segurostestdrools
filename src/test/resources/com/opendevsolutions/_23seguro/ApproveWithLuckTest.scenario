@@ -1,0 +1,53 @@
+<scenario>
+  <name>ApproveWithLuck-test.scenario</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures>
+    <fact-data>
+      <type>Student</type>
+      <fieldData>
+        <field-data>
+          <name>qualification</name>
+          <value>4</value>
+          <nature>4</nature>
+        </field-data>
+        <field-data>
+          <name>worksDelivered</name>
+          <value>10</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>student</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <execution-trace>
+      <executionTimeResult>7</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>status</fieldName>
+          <expected>Aprobo</expected>
+          <actualResult>Aprobo</actualResult>
+          <successResult>true</successResult>
+          <explanation>[Student] field [status] was [Aprobo].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>Student</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
+  </fixtures>
+  <lastRunResult>2019-02-15 20:49:48.482 UTC</lastRunResult>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>com.opendevsolutions._23seguro</packageName>
+  <imports>
+    <imports/>
+  </imports>
+  <ksessions>
+    <string>defaultKieSession</string>
+  </ksessions>
+</scenario>

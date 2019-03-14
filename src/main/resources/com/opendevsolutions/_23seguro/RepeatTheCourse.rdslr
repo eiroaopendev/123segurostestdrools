@@ -1,0 +1,12 @@
+package com.opendevsolutions._23seguro;
+
+import java.lang.Number;
+
+rule "RepeatTheCourse"
+	dialect "mvel"
+	when
+		Cuando la calificacion esta entre 1 y 3
+		Cuando la cantidad de TPs es Menor a 10
+	then
+		Calificacion recursar
+end

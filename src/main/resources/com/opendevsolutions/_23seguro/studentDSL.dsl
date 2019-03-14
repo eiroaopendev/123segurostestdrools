@@ -1,0 +1,10 @@
+[when]Cuando la calificacion esta entre {minQualification} y {maxQualification} = student : Student(qualification >= {minQualification} && <= {maxQualification})
+[when]Cuando la cantidad de TPs es igual a {tps} = Student(worksDelivered == {tps})
+[when]Cuando la cantidad de TPs es Mayor a {tps} = student : Student(worksDelivered > {tps})
+[when]Cuando la cantidad de TPs es Menor a {tps} = Student(worksDelivered < {tps})
+
+[then]Calificacion desaprobada = student.setStatus("Desaprobo")
+[then]Calificacion aprobada = student.setStatus("Aprobo")
+[then]Calificacion recursar = student.setStatus("Recursar")
+[then]Cantidad de TPs no valida = student.setStatus("Cantidad de TPs no valida")
+[then]Calificacion aprobada con honores = student.setStatus("Aprobo con honores")

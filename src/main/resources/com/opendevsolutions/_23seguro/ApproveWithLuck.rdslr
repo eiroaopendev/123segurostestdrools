@@ -1,0 +1,12 @@
+package com.opendevsolutions._23seguro;
+
+import java.lang.Number;
+
+rule "ApproveWithLuck"
+	dialect "mvel"
+	when
+		Cuando la calificacion esta entre 4 y 6
+		Cuando la cantidad de TPs es igual a 10
+	then
+		Calificacion aprobada
+end
