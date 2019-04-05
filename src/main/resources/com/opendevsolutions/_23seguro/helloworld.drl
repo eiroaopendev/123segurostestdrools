@@ -1,0 +1,22 @@
+package com.opendevsolutions._23seguro;
+import com.opendevsolutions._23seguro.HelloWorld;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+ 
+function boolean prueba(HelloWorld asd){
+    
+    String strDate = asd.getBirthDate(); 
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd"); 
+    Date dateStr = formatter.parse(strDate);
+    return dateStr.after(new Date());
+}
+ 
+rule "happy birthday"
+dialect "java"
+    
+    when
+        hw: HelloWorld(age > 28, magicString == "asdasd");
+        eval (prueba(hw));
+    then
+        hw.setMagicString("MAGIC BITCH");
+end
